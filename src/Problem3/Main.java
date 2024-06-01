@@ -9,13 +9,11 @@ public class Main {
 
         String eventName, date;
         String INPUT_DATE_PATTERN="MM-dd-yyyy kk:mm";
-        String answer="No";
 
         Scanner eventNameScan = new Scanner(System.in);
         Scanner dateScan = new Scanner(System.in);
         Scanner timeScan = new Scanner(System.in);
         Scanner timeZoneScan = new Scanner(System.in);
-        Scanner needMoreTimeZoneScan = new Scanner(System.in);
 
 
         Event event = new Event();
@@ -33,39 +31,9 @@ public class Main {
         event.setDate(LocalDateTime.parse(date,DateTimeFormatter.ofPattern(INPUT_DATE_PATTERN)));
         System.out.println(event.toString());
 
-
-        while (true){
-            try{
-                System.out.println("Do you wish to view it in other timezone?");
-                answer = needMoreTimeZoneScan.nextLine();
-                if(answer.equals("YES")){
-                    System.out.println("Enter TimeZone");
-                    event.setTimeZone(timeZoneScan.nextLine());
-                    event.printEventWithDifZone();
-                    break;
-                }else{
-                    break;
-                }
-            }
-            catch (Exception e){
-                System.out.println("Error enter time zone again");
-                answer = needMoreTimeZoneScan.nextLine();
-                if(answer.equals("YES")){
-                    System.out.println("Enter TimeZone");
-                    event.setTimeZone(timeZoneScan.nextLine());
-                    event.printEventWithDifZone();
-                    break;
-                }else{
-                    break;
-                }
-            }
-        }
-
-
-
-
-
-
+        System.out.println("Check date in another time zone => Enter TimeZone");
+        event.setTimeZone(timeZoneScan.nextLine());
+        event.printEventWithDifZone();
 
     }
 }
