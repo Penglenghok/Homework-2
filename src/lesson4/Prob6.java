@@ -1,7 +1,7 @@
 package lesson4;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestClass {
+public class Prob6 {
 
     @org.junit.jupiter.api.Test
     public void TestProb1()
