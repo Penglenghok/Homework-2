@@ -6,7 +6,7 @@ public class Prob2 {
         System.out.println(findMinChar(input));
     }
 
-    private static Character findMinChar(String s){
+    public static Character findMinChar(String s){
         char c = s.charAt(0);
         if (s.length() - 1 == 0){
             return c;
