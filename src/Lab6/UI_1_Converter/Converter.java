@@ -33,12 +33,6 @@ public class Converter extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setContentPane(mainPanel);
-        txtMile.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(e.paramString());
-            }
-        });
         convertButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
