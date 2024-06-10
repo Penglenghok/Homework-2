@@ -1,4 +1,4 @@
-package lesson7;
+package Lab6.UI_2_StringUtility;
 
 import javax.swing.*;
 import java.awt.*;
