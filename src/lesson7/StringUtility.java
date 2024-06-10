@@ -15,7 +15,7 @@ public class StringUtility extends JFrame implements ActionListener {
     private JButton removeButton;
 
     public StringUtility() {
-        super("String Utility"); // Set window title
+        super("String Utility");
 
         setContentPane(myPanel);
         setVisible(true);
@@ -35,8 +35,6 @@ public class StringUtility extends JFrame implements ActionListener {
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(3, 1, 0, 25));
 
-
-        // Add buttons to the button panel
         buttonPanel.add(countButton);
         buttonPanel.add(reverseButton);
         buttonPanel.add(removeButton);
@@ -113,6 +111,5 @@ public class StringUtility extends JFrame implements ActionListener {
     public static void main(String[] args) {
         StringUtility app = new StringUtility();
         app.setSize(500, 250);
-        app.setVisible(true);
     }
 }
