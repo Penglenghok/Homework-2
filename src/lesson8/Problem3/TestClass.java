@@ -1,5 +1,4 @@
 package lesson8.Problem3;
- ;
 import java.util.*;
 
 public class TestClass {
