@@ -25,11 +25,11 @@ public class DoublyLinkedList {
     }
 
     // 2. Remove by passing object
-    public Node remove(String item) {
+    public boolean remove(String item) {
         Node n = new Node(item);
         Node current = header;
         if (header.next == null) {
-            return null;
+            return false;
         } else {
             while (current.next != null) {
                 if (current.value.equals(item)) {
@@ -37,22 +37,22 @@ public class DoublyLinkedList {
                 }
                 current = current.next;
             }
-            if(current.next != null){
+            if (current.next != null) {
                 current.previous.next = current.next;
                 current.next.previous = current.previous;
-            }else{
-                current.previous.next=null;
-                current.previous=null;
+            } else {
+                current.previous.next = null;
+                current.previous = null;
             }
-            return n;
+            return true;
         }
     }
 
     // 3. Remove the First Node
-    public Node removeFirst() {
-        if(header.next ==null){
-            return null;
-        }else{
+    public boolean removeFirst() {
+        if (header.next == null) {
+            return false;
+        } else {
             Node firstNode = header.next;
             header.next = firstNode.next;
             if (firstNode.next != null) {
@@ -60,7 +60,7 @@ public class DoublyLinkedList {
             }
             firstNode.next = null;
             firstNode.previous = null;
-            return firstNode;
+            return true;
         }
 
         ///Another solution///
@@ -135,20 +135,20 @@ public class DoublyLinkedList {
 //        list.remove("Steve");
 
         System.out.println(list);
-//
-//			list.addLast("Harry");
-//			System.out.println(list);
-//			list.removeFirst();
-//        list.removeFirst();
+
+        list.addLast("Harry");
+        System.out.println(list);
         list.removeFirst();
         list.removeFirst();
+        System.out.println(list.removeFirst());
+        System.out.println(list.removeFirst());
+        System.out.println(list.removeFirst());
         list.removeFirst();
-        list.removeFirst();
-			System.out.println(list);
-//
-//			list.addLast("Bob");
-//			System.out.println(list);
-//			list.printReverse();
+        System.out.println(list);
+        list.addLast("Bob");
+        list.addLast("Joe");
+        System.out.println(list);
+        list.printReverse();
         // Call all your implemented Methods
     }
 }
