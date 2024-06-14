@@ -69,6 +69,7 @@ public class MyPersonList {
     }
     // To display all the persons list
     public String toString() {
+        if (size == 0) return null;
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < size - 1; ++i) {
             sb.append(personArray[i] + ", \n");
