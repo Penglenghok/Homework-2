@@ -1,7 +1,5 @@
 package lesson9.Prob2;
 
-import lesson8.Prob4.DoublyLinkedList;
-
 public class ArrayStackDemo {
     public class Node{
         Integer data;
